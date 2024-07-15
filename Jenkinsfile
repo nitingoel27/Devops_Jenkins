@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         registry = 'https://index.docker.io/v1/'
-        dockerImage = 'tanishaaa31/java-quiz-app:latest'
+        dockerImage = 'nitingoel27/devopsjenkins:tagname'
     }
     
     tools {
@@ -18,7 +18,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the Git repository
-                git url: 'https://github.com/Tanishaaaaaaa/devops.git', branch: 'main'
+                git url: 'https://github.com/nitingoel27/Devops_Jenkins.git', branch: 'main'
             }
         }
 
@@ -40,7 +40,7 @@ pipeline {
             steps {
                 // Build Docker image
                 script {
-                    dockerImage = docker.build("tanishaaa31/java-quiz-app:latest")
+                    dockerImage = docker.build("nitingoel27/devopsjenkins:tagname")
                 }
             }
         }
@@ -50,7 +50,7 @@ pipeline {
                 // Push Docker image to Docker Hub
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', '42ed6bcb-c816-43ee-9780-60b472c2f518') {
-                        docker.image("tanishaaa31/java-quiz-app:latest").push()
+                        docker.image("nitingoel27/devopsjenkins:tagname").push()
                     }
                 }
             }
