@@ -49,7 +49,7 @@ pipeline {
             steps {
                 // Push Docker image to Docker Hub
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', '42ed6bcb-c816-43ee-9780-60b472c2f518') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'e9fe1f1e-e427-4d70-99fa-3190224f9d1b') {
                         docker.image("nitingoel27/devopsjenkins:tagname").push()
                     }
                 }
