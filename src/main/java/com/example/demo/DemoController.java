@@ -20,7 +20,7 @@ public class DemoController {
 String sample() {
     StringBuilder mlIntro = new StringBuilder();
     mlIntro.append("<html><body>");
-    mlIntro.append("<h1>Introduction to Machine Learning</h1>");
+    mlIntro.append("<h1>Introduction to ML</h1>");
 
     mlIntro.append("<h2>What is Machine Learning?</h2>");
     mlIntro.append("<p>Machine Learning is a subset of artificial intelligence (AI) that allows systems to learn and improve from experience without being explicitly programmed. It involves algorithms that learn patterns from data and make predictions or decisions based on it.</p>");
